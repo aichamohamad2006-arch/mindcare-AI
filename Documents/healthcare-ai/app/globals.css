@@ -1,0 +1,298 @@
+/* =========================================================
+   JAMOT HOSPITAL
+   AI-POWERED MENTAL HEALTH SUPPORT PLATFORM
+
+   GLOBAL CSS
+   Patient Login Page - Current Version
+
+   We will continue adding to this file as we build
+   the application step by step.
+   ========================================================= */
+
+
+/* =========================================================
+   1. BASIC RESET
+   ========================================================= */
+
+/*
+   Browsers automatically add some spacing around elements.
+   We remove that default spacing so that we have full
+   control over the design.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*
+   Make sure the page can use the complete browser height.
+*/
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+/* =========================================================
+   2. BODY
+   ========================================================= */
+
+/*
+   Times New Roman is the main font requested for the
+   application.
+
+   We keep Arial as a fallback if Times New Roman is
+   unavailable on a particular device.
+*/
+body {
+  font-family: "Times New Roman", Times, serif;
+
+  background-color: #f4f8fc;
+
+  color: #17365d;
+}
+
+
+/* =========================================================
+   3. PATIENT LOGIN PAGE
+   ========================================================= */
+
+/*
+   This is the main container for our login page.
+
+   min-height: 100vh means the page will always occupy
+   at least the full height of the user's screen.
+
+   display: flex allows us to position the login card
+   in the center of the screen.
+*/
+.login-page {
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+
+  /*
+     A very light blue gradient gives the page
+     a professional healthcare appearance.
+  */
+  background:
+    linear-gradient(
+      135deg,
+      #eef6ff,
+      #f8fbff
+    );
+}
+
+
+/* =========================================================
+   4. LOGIN CARD
+   ========================================================= */
+
+/*
+   This is the white box where our Patient Login
+   information will be displayed.
+
+   We are setting a maximum width so that the card
+   does not become excessively wide on large PC screens.
+*/
+.login-card {
+  width: 100%;
+
+  max-width: 520px;
+
+  padding: 55px 50px;
+
+  background: white;
+
+  /*
+     A very light border gives the card a clean
+     professional appearance.
+  */
+  border: 1px solid #e1eaf4;
+
+  /*
+     Rounded corners make the interface modern
+     without making it childish.
+  */
+  border-radius: 24px;
+
+  /*
+     Soft shadow separates the card from the
+     light background.
+  */
+  box-shadow:
+    0 20px 60px rgba(31, 78, 121, 0.12);
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   5. HOSPITAL NAME
+   ========================================================= */
+
+/*
+   "JAMOT HOSPITAL" appears above the login title.
+*/
+.hospital-name {
+  margin-bottom: 6px;
+
+  /*
+     We use Arial here because small labels are easier
+     to read with a clean sans-serif font.
+  */
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  /*
+     Letter spacing gives the hospital name a more
+     professional medical-brand appearance.
+  */
+  letter-spacing: 2px;
+
+  color: #1c64b7;
+}
+
+
+/* =========================================================
+   6. PLATFORM NAME
+   ========================================================= */
+
+/*
+   This displays:
+
+   Mental Health Support Platform
+*/
+.platform-name {
+  margin-bottom: 45px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  color: #8291a5;
+}
+
+
+/* =========================================================
+   7. PATIENT LOGIN TITLE
+   ========================================================= */
+
+/*
+   This styles our main:
+
+   Patient Login
+
+   heading.
+*/
+.login-card h1 {
+  margin-bottom: 12px;
+
+  /*
+     Times New Roman is used for the main heading
+     to give the application the elegant style
+     you requested.
+  */
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 44px;
+
+  font-weight: 600;
+
+  color: #173f6f;
+}
+
+
+/* =========================================================
+   8. WELCOME MESSAGE
+   ========================================================= */
+
+/*
+   This is the short message underneath
+   "Patient Login".
+*/
+.welcome-text {
+  max-width: 390px;
+
+  /*
+     Arial makes longer explanatory text easier
+     to read on a screen.
+  */
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  /*
+     Line height controls the vertical space
+     between lines of text.
+  */
+  line-height: 1.7;
+
+  color: #718096;
+}
+
+
+/* =========================================================
+   9. RESPONSIVE DESIGN — TABLET
+   ========================================================= */
+
+/*This section applies when the screen is smaller
+   than 900px.We are preparing the application to work properly on tablets and smaller laptop screens.*/
+@media (max-width: 900px) {
+  .login-page {
+    padding: 30px;
+  }
+  .login-card {
+    max-width: 500px;
+    padding: 45px 40px;
+  }
+}
+/*RESPONSIVE DESIGN — MOBILE */
+/*This section applies to phones.The login card becomes smaller and the text automatically adjusts.*/
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px;
+  }
+  .login-card {
+    padding: 40px 25px;
+
+    border-radius: 18px;
+  }
+  .login-card h1 {
+    font-size: 36px;
+  }
+  .platform-name {
+    margin-bottom: 35px;
+  }
+  .welcome-text {
+    font-size: 13px;
+  }
+}
+/*VERY SMALL PHONES*/
+/* Extra adjustment for very small phone screens.*/
+@media (max-width: 400px) {
+
+  .login-page {
+    padding: 12px;
+  }
+  .login-card {
+    padding: 32px 20px;
+  }
+  .login-card h1 {
+    font-size: 32px;
+  }
+}
